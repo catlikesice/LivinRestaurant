@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background: #faf8f4; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 32px; }
+    h1, h2 { color: #462a12; }
+    nav { display: flex; justify-content: center; gap: 2em; margin-bottom: 40px;}
+    nav a { text-decoration: none; color: #905c28; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { margin-bottom: 48px; }
+    #home { background: #f6ede4; padding: 24px; border-radius: 8px; }
+    #reservation { background: #e5ece7; padding: 24px; border-radius: 8px; }
+    #philosophy { background: #ecf0e4; padding: 24px; border-radius: 8px; }
+    #menu { background: #eedcea; padding: 24px; border-radius: 8px; }
+    label { display: block; margin-top: 1em; }
+    input, textarea { width: 100%; padding: 0.5em; margin-top: 0.5em; border: 1px solid #bbb; border-radius: 4px; }
+    button { background: #905c28; color: #fff; border: none; border-radius: 4px; padding: 0.5em 2em; margin-top: 1em; cursor: pointer;}
+    button:hover { background: #462a12;}
+    ul.menu-list { list-style: none; padding: 0; }
+    ul.menu-list li { padding: 0.5em 0; border-bottom: 1px dashed #bbb;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#reservation">Make a Reservation</a>
+    <a href="#philosophy">About Our Philosophy</a>
+    <a href="#menu">Menu</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="home">
+      <h1>Welcome to Our Restaurant</h1>
+      <p>Experience a culinary journey where tradition meets innovation. Join us for an unforgettable meal.</p>
+    </section>
+
+    <section id="reservation">
+      <h2>Make a Reservation</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="people">Number of People</label>
+        <input type="number" id="people" name="people" min="1" max="20" required>
+
+        <label for="special">Special Requests</label>
+        <textarea id="special" name="special" rows="3"></textarea>
+
+        <button type="submit">Reserve</button>
+      </form>
+    </section>
+
+    <section id="philosophy">
+      <h2>About Our Philosophy</h2>
+      <p>We believe in sourcing the finest ingredients locally and preparing every dish with care and respect for tradition. Our philosophy is simple: serve great food in an inviting atmosphere.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Menu</h2>
+      <ul class="menu-list">
+        <li><strong>Seasonal Salad</strong> – Fresh local greens and market vegetables.</li>
+        <li><strong>Handmade Pasta</strong> – Daily selection with chef's sauce.</li>
+        <li><strong>Grilled Wild Salmon</strong> – Charred and served with herb beurre blanc.</li>
+        <li><strong>Roast Chicken</strong> – Free-range chicken with root vegetables.</li>
+        <li><strong>Chocolate Mousse</strong> – Decadent, made daily in-house.</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
