@@ -2,41 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Restaurant Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Optional: better fonts for headings & body -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <title>Livin Hotel — Tbilisi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; background: #faf8f4; }
-    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 32px; }
-    h1, h2 { color: #462a12; }
-    nav { display: flex; justify-content: center; gap: 2em; margin-bottom: 40px;}
-    nav a { text-decoration: none; color: #905c28; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { margin-bottom: 48px; }
-    #home { background: #f6ede4; padding: 24px; border-radius: 8px; }
-    #reservation { background: #e5ece7; padding: 24px; border-radius: 8px; }
-    #philosophy { background: #ecf0e4; padding: 24px; border-radius: 8px; }
-    #menu { background: #eedcea; padding: 24px; border-radius: 8px; }
-    label { display: block; margin-top: 1em; }
-    input, textarea { width: 100%; padding: 0.5em; margin-top: 0.5em; border: 1px solid #bbb; border-radius: 4px; }
-    button { background: #905c28; color: #fff; border: none; border-radius: 4px; padding: 0.5em 2em; margin-top: 1em; cursor: pointer;}
-    button:hover { background: #462a12;}
-    ul.menu-list { list-style: none; padding: 0; }
-    ul.menu-list li { padding: 0.5em 0; border-bottom: 1px dashed #bbb;}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#reservation">Make a Reservation</a>
-    <a href="#philosophy">About Our Philosophy</a>
-    <a href="#menu">Menu</a>
-  </nav>
+  <header class="site-header">
+    <div class="navbar">
+      <a href="#" class="brand" aria-label="Livin Hotel Tbilisi">
+        <span class="site-logo">
+          <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=200&q=80" alt="Livin Hotel Emblem">
+        </span>
+        <span class="brand-text">
+          <span class="site-title">Livin Hotel</span>
+          <span class="site-sub">Tbilisi • Comfort &amp; Hospitality</span>
+        </span>
+      </a>
 
-  <div class="container">
+      <nav class="nav-actions">
+        <a class="nav-card" href="#">Home</a>
+        <a class="nav-card book" href="#">Book a Room</a>
+        <a class="nav-card about" href="#">About Tbilisi</a>
+        <a class="nav-card restaurant" href="#">Restaurant</a>
+      </nav>
 
-  </div>
+      <div class="language-selector">
+        <label class="sr-only" for="language">Choose language</label>
+        <select id="language" name="language">
+          <option selected>English</option>
+          <option>ქართული</option>
+          <option>Русский</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Livin Hotel — Tbilisi</h1>
+        <p class="lead">
+          Experience warm hospitality in the heart of Tbilisi. Modern comfort meets local charm — inspired by our emblem.
+        </p>
+        <div class="hero-actions">
+          <a class="cta primary" href="#">Check Availability</a>
+          <a class="cta ghost" href="#">Explore Tbilisi</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="logo-circle">
+          <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=200&q=80" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cards" aria-label="Hotel highlights">
+      <article class="section-card">
+        <h2>Signature Suites</h2>
+        <p>Curated interiors with locally crafted details and restful lighting.</p>
+        <a href="#" class="card-link">View rooms →</a>
+      </article>
+      <article class="section-card">
+        <h2>Chef’s Table</h2>
+        <p>Modern Georgian cuisine with an intimate chef-led tasting menu.</p>
+        <a href="#" class="card-link">Reserve a seat →</a>
+      </article>
+      <article class="section-card">
+        <h2>City Guides</h2>
+        <p>Bespoke itineraries that bring Tbilisi’s culture, art, and flavors to life.</p>
+        <a href="#" class="card-link">Plan your stay →</a>
+      </article>
+    </section>
+
+    <p class="notice">© Livin Hotel • Tbilisi</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="muted">© Livin Hotel • Tbilisi</p>
+      <p class="muted">Crafted with care for modern travelers.</p>
+    </div>
+  </footer>
 </body>
 </html>
