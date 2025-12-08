@@ -79,10 +79,13 @@ body{
   align-items:center;
 }
 .language-selector select{
+  -webkit-appearance:none;
+  -moz-appearance:none;
   appearance:none;
+  background-image:none;
+  background-color: rgba(0,0,0,0.4);
   border-radius:999px;
   border:1px solid rgba(255,255,255,0.12);
-  background: rgba(0,0,0,0.4);
   color:#fff;
   font-family:var(--ui-font);
   font-weight:600;
@@ -92,6 +95,9 @@ body{
   box-shadow:0 6px 18px rgba(0,0,0,0.45);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+select::-ms-expand{
+  display:none;
+}
 select option{
   color:#0c1118;
   background:#ffffff;
@@ -100,19 +106,6 @@ select option:checked,
 select option:hover{
   color:#ffffff;
   background:#111722;
-}
-.language-selector::after{
-  content:"";
-  position:absolute;
-  right:18px;
-  top:50%;
-  transform:translateY(-25%);
-  width:0;
-  height:0;
-  border-left:5px solid transparent;
-  border-right:5px solid transparent;
-  border-top:6px solid var(--muted);
-  pointer-events:none;
 }
 .language-selector select:focus{
   outline:none;
